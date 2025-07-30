@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest - Opret Kursus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" onclick="goHome()">StudyQuest</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="search public courses">
+        </div>
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+        </div>
+    </header>
+
+    <main class="main-content narrow">
+        <button class="back-button" onclick="goBack()">← Tilbage til hovedside</button>
+
+        <div class="course-header">
+            <div class="course-title large">Psykologi Grundkursus</div>
+            <div class="course-details">Københavns Universitet • Forår 2025 • Psykologi</div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title large">Overordnede Kursuinformationer</h2>
+            
+            <div class="input-group">
+                <label class="input-label">Officielle Læringsmål</label>
+                <div class="input-row">
+                    <textarea class="text-input" placeholder="Indtast eller kopier de officielle læringsmål for kurset..."></textarea>
+                    <button class="upload-btn">Upload</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Officiel Kursusbeskrivelse</label>
+                <div class="input-row">
+                    <textarea class="text-input" placeholder="Indtast eller kopier den officielle kursusbeskrivelse..."></textarea>
+                    <button class="upload-btn">Upload</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Andre Overordnede Dokumenter</label>
+                <div class="upload-area" onclick="uploadOtherDocs()">
+                    <div class="upload-text">Klik for at uploade andre dokumenter (pensumlister, syllabi, osv.)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lectures-section">
+            <h2 class="section-title large">Forelæsninger</h2>
+            
+            <div class="lecture-card">
+                <div class="lecture-header" onclick="toggleLecture(1)">
+                    <div class="lecture-title">Lecture 1 - Introduction to Psychology</div>
+                    <div class="lecture-toggle" id="toggle-1">▼</div>
+                </div>
+                <div class="lecture-content" id="content-1">
+                    <input type="text" class="lecture-input" placeholder="Forelæsning titel" value="Introduction to Psychology">
+                    <div class="upload-area">
+                        <div class="upload-text">Upload forelæsningsindhold (PDF, billeder, slides, links)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lecture-card">
+                <div class="lecture-header" onclick="toggleLecture(2)">
+                    <div class="lecture-title">Lecture 2 - Cognitive Psychology</div>
+                    <div class="lecture-toggle" id="toggle-2">▼</div>
+                </div>
+                <div class="lecture-content" id="content-2">
+                    <input type="text" class="lecture-input" placeholder="Forelæsning titel" value="Cognitive Psychology">
+                    <div class="upload-area">
+                        <div class="upload-text">Upload forelæsningsindhold (PDF, billeder, slides, links)</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-lecture-btn" onclick="addLecture()">+ Tilføj ny forelæsning</button>
+        </section>
+
+        <button class="generate-btn" onclick="generateCourse()">Generate Course</button>
+    </main>
+
+    <script>
+        let lectureCount = 2;
+
+        function goHome() {
+            window.location.href = 'dashboard.html';
+        }
+
+        function goBack() {
+            window.location.href = 'dashboard.html';
+        }
+
+        function uploadOtherDocs() {
+            // Handle file upload
+            console.log("Uploading other documents");
+        }
+
+        function toggleLecture(id) {
+            const content = document.getElementById(`content-${id}`);
+            const toggle = document.getElementById(`toggle-${id}`);
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                toggle.classList.remove('expanded');
+            } else {
+                content.classList.add('expanded');
+                toggle.classList.add('expanded');
+            }
+        }
+
+        function addLecture() {
+            lectureCount++;
+            const lecturesSection = document.querySelector('.lectures-section');
+            const addButton = document.querySelector('.add-lecture-btn');
+            
+            const newLecture = document.createElement('div');
+            newLecture.className = 'lecture-card';
+            newLecture.innerHTML = `
+                <div class="lecture-header" onclick="toggleLecture(${lectureCount})">
+                    <div class="lecture-title">Lecture ${lectureCount} - Ny forelæsning</div>
+                    <div class="lecture-toggle" id="toggle-${lectureCount}">▼</div>
+                </div>
+                <div class="lecture-content" id="content-${lectureCount}">
+                    <input type="text" class="lecture-input" placeholder="Forelæsning titel" value="Ny forelæsning">
+                    <div class="upload-area">
+                        <div class="upload-text">Upload forelæsningsindhold (PDF, billeder, slides, links)</div>
+                    </div>
+                </div>
+            `;
+            
+            lecturesSection.insertBefore(newLecture, addButton);
+        }
+
+        function generateCourse() {
+            window.location.href = 'course.html';
+        }
+    </script>
+</body>
+</html>

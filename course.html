@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest - Psykologi Grundkursus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" onclick="goHome()">StudyQuest</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="search public courses">
+        </div>
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <button class="back-button" onclick="goBack()">← Tilbage til mine kurser</button>
+
+        <div class="course-overview">
+            <div class="meta-info">
+                Oprettet: 15. januar 2025<br>
+                Genereret: 16. januar 2025
+            </div>
+            
+            <h1 class="course-title hero">Psykologi Grundkursus</h1>
+            <div class="course-details">Københavns Universitet • Forår 2025 • Psykologi</div>
+            
+            <p class="course-description">
+                Dette grundkursus introducerer de fundamentale principper inden for psykologi, herunder kognitiv psykologi, udviklingspsykologi, socialpsykologi og forskningsmetoder. Kurset giver en bred forståelse af menneskelig adfærd og mentale processer.
+            </p>
+
+            <div class="course-progress-section">
+                <div class="progress-circle">
+                    <svg>
+                        <circle cx="40" cy="40" r="36" class="progress-bg"></circle>
+                        <circle cx="40" cy="40" r="36" class="progress-fill-circle"></circle>
+                    </svg>
+                    <div class="progress-text">65%</div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress-title">Samlet Fremskridt</div>
+                    <div class="progress-details">8 af 12 forelæsninger gennemført</div>
+                    <div class="progress-details">Estimeret tid tilbage: 4 timer</div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="resume-btn" onclick="resumeLearning()">Resume hvor du slap</button>
+                <button class="share-btn" onclick="shareCourse()">Del kursus med medstuderende</button>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="section-title large">Forelæsninger</h2>
+            <div class="lectures-grid">
+                <div class="lecture-card progress-card completed" data-progress="100" onclick="startLecture(1)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 1 - Introduction to Psychology</h3>
+                        <p class="lecture-description">Grundlæggende introduktion til psykologi som videnskab, historisk udvikling og hovedområder.</p>
+                        <p class="lecture-subjects">Emner: Videnskabsteori, Psykologiens historie, Forskningsmetoder</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Færdig</span>
+                            <span class="lecture-progress-text">100%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(1)">Revisit lecture</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card completed" data-progress="100" onclick="startLecture(2)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 2 - Cognitive Psychology</h3>
+                        <p class="lecture-description">Undersøgelse af mentale processer som opmærksomhed, hukommelse, sprog og problemløsning.</p>
+                        <p class="lecture-subjects">Emner: Hukommelse, Opmærksomhed, Sprogprocesser</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Færdig</span>
+                            <span class="lecture-progress-text">100%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(2)">Revisit lecture</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card in-progress" data-progress="62" onclick="startLecture(3)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 3 - Developmental Psychology</h3>
+                        <p class="lecture-description">Menneskets udvikling gennem livet, fra fødsel til aldring, både kognitivt og emotionelt.</p>
+                        <p class="lecture-subjects">Emner: Børnepsykologi, Adolescens, Voksenudvikling</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">I gang</span>
+                            <span class="lecture-progress-text">62%</span>
+                        </div>
+                        <button class="lecture-btn continue" onclick="event.stopPropagation(); startLecture(3)">Continue learning</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card" data-progress="0" onclick="startLecture(4)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 4 - Social Psychology</h3>
+                        <p class="lecture-description">Hvordan sociale situationer påvirker individets tanker, følelser og adfærd.</p>
+                        <p class="lecture-subjects">Emner: Gruppedynamik, Fordomme, Sociale normer</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Ikke startet</span>
+                            <span class="lecture-progress-text">0%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(4)">Start learning</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card" data-progress="0" onclick="startLecture(5)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 5 - Research Methods</h3>
+                        <p class="lecture-description">Videnskabelige metoder i psykologi, eksperimentel design og statistisk analyse.</p>
+                        <p class="lecture-subjects">Emner: Eksperimentdesign, Statistik, Etik</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Ikke startet</span>
+                            <span class="lecture-progress-text">0%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(5)">Start learning</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card" data-progress="0" onclick="startLecture(6)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 6 - Personality Psychology</h3>
+                        <p class="lecture-description">Teorier om personlighed, personlighedstests og individuelle forskelle.</p>
+                        <p class="lecture-subjects">Emner: Personlighedsteorier, Big Five, Måling</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Ikke startet</span>
+                            <span class="lecture-progress-text">0%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(6)">Start learning</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card" data-progress="0" onclick="startLecture(7)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 7 - Abnormal Psychology</h3>
+                        <p class="lecture-description">Psykiske lidelser, deres årsager, symptomer og behandlingsmuligheder.</p>
+                        <p class="lecture-subjects">Emner: Diagnose, DSM-5, Terapiformer</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Ikke startet</span>
+                            <span class="lecture-progress-text">0%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(7)">Start learning</button>
+                    </div>
+                </div>
+
+                <div class="lecture-card progress-card" data-progress="0" onclick="startLecture(8)">
+                    <div class="lecture-header">
+                        <h3 class="lecture-title large">Lecture 8 - Learning and Memory</h3>
+                        <p class="lecture-description">Hvordan vi lærer og husker information, forskellige typer hukommelse og læringsteorier.</p>
+                        <p class="lecture-subjects">Emner: Klassisk betingning, Operant betingning, Hukommelsesprocesser</p>
+                    </div>
+                    <div class="lecture-footer">
+                        <div class="lecture-progress">
+                            <span class="lecture-progress-text">Ikke startet</span>
+                            <span class="lecture-progress-text">0%</span>
+                        </div>
+                        <button class="lecture-btn" onclick="event.stopPropagation(); startLecture(8)">Start learning</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function goHome() {
+            window.location.href = 'dashboard.html';
+        }
+
+        function goBack() {
+            window.location.href = 'dashboard.html';
+        }
+
+        function resumeLearning() {
+            // Go to the first incomplete lecture (lecture 3 in this case)
+            startLecture(3);
+        }
+
+        function shareCourse() {
+            alert('Course sharing functionality would be implemented here');
+        }
+
+        function startLecture(lectureNumber) {
+            alert(`Starting Lecture ${lectureNumber}. In a real app, this would navigate to the learning interface.`);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressCards = document.querySelectorAll('.progress-card');
+            progressCards.forEach(card => {
+                const progress = card.dataset.progress || 0;
+                card.style.setProperty('--progress-percent', `${progress}%`);
+            });
+        });
+
+    </script>
+</body>
+</html>

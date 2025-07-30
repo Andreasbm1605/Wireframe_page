@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest - Transform Your Study Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo large">StudyQuest</div>
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="openLoginModal()">Login</button>
+            <button class="signup-btn" onclick="openSignupModal()">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="main-content landing">
+        <section class="hero-section">
+            <h1 class="hero-title">Transform Boring Academic Materials Into Interactive Learning</h1>
+            <p class="hero-subtitle">Stop struggling with overwhelming PDFs and textbooks. StudyQuest turns passive reading into active, engaging study sessions with AI-powered quizzes and progress tracking.</p>
+            <button class="cta-button" onclick="goToDashboard()">Create your first course for free</button>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title">Why Students Choose StudyQuest</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Structure Your Study Material</h3>
+                    <p class="feature-description">AI automatically organizes complex academic content into manageable, logical chunks that follow proven learning principles.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Active Learning Experience</h3>
+                    <p class="feature-description">Interactive quizzes and tests keep you engaged throughout your reading, ensuring better retention and understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Track Your Progress</h3>
+                    <p class="feature-description">See exactly how much you've covered and what areas need more attention with detailed progress tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3 class="feature-title">Exam Simulation</h3>
+                    <p class="feature-description">Practice with AI-powered mock oral exams that prepare you for real exam situations with personalized feedback.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">© 2025 StudyQuest. Transform your study experience today.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal" onclick="closeModal(event, 'loginModal')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal(null, 'loginModal')">&times;</button>
+            <h2 class="modal-title">Login to StudyQuest</h2>
+            
+            <form class="login-form" onsubmit="login(event)">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="login-submit">Login</button>
+            </form>
+            
+            <div class="divider">
+                <span>or</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn" onclick="login(event)">
+                    <div class="social-icon"></div>
+                    Continue with Google
+                </button>
+                <button class="social-btn" onclick="login(event)">
+                    <div class="social-icon"></div>
+                    Continue with Facebook
+                </button>
+                <button class="social-btn" onclick="login(event)">
+                    <div class="social-icon"></div>
+                    Continue with Apple
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal-overlay" id="signupModal" onclick="closeModal(event, 'signupModal')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal(null, 'signupModal')">&times;</button>
+            <h2 class="modal-title">Join StudyQuest</h2>
+            
+            <form class="login-form" onsubmit="signup(event)">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password" class="form-input" placeholder="Confirm your password">
+                </div>
+                
+                <button type="submit" class="login-submit">Create Account</button>
+            </form>
+            
+            <div class="divider">
+                <span>or</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn" onclick="signup(event)">
+                    <div class="social-icon"></div>
+                    Continue with Google
+                </button>
+                <button class="social-btn" onclick="signup(event)">
+                    <div class="social-icon"></div>
+                    Continue with Facebook
+                </button>
+                <button class="social-btn" onclick="signup(event)">
+                    <div class="social-icon"></div>
+                    Continue with Apple
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+
+        function openSignupModal() {
+            document.getElementById('signupModal').style.display = 'flex';
+        }
+
+        function closeModal(event, modalId) {
+            if (event && event.target !== event.currentTarget) {
+                return;
+            }
+            if (modalId) {
+                document.getElementById(modalId).style.display = 'none';
+            }
+        }
+
+        function login(event) {
+            event.preventDefault();
+            window.location.href = 'dashboard.html';
+        }
+
+        function signup(event) {
+            event.preventDefault();
+            window.location.href = 'dashboard.html';
+        }
+
+        function goToDashboard() {
+            window.location.href = 'dashboard.html';
+        }
+
+        // Close modals when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('loginModal').style.display = 'none';
+                document.getElementById('signupModal').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

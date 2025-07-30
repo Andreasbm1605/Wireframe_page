@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" onclick="goHome()">StudyQuest</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="search public courses">
+        </div>
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2 class="section-title">My Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card" onclick="goToCourse()">
+                    <div class="course-title">Psykologi Grundkursus</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Forår 2025</div>
+                    <div class="course-progress">
+                        <div>Progress: 65%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" onclick="goToCourse()">
+                    <div class="course-title">Statistik og Metode</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Forår 2025</div>
+                    <div class="course-progress">
+                        <div>Progress: 32%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 32%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" onclick="goToCourse()">
+                    <div class="course-title">Organisationspsykologi</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Forår 2025</div>
+                    <div class="course-progress">
+                        <div>Progress: 12%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 12%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card add-course-card" onclick="openCourseModal()">
+                    +
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Co-students Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-title">Klinisk Psykologi</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Shared by Emma</div>
+                    <div class="course-progress">
+                        <div>Available to join</div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-title">Neuropsykologi</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Shared by Mads</div>
+                    <div class="course-progress">
+                        <div>Available to join</div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-title">Udviklingspsykologi</div>
+                    <div class="course-info">Københavns Universitet</div>
+                    <div class="course-info">Shared by Sarah</div>
+                    <div class="course-progress">
+                        <div>Available to join</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Create Course Modal -->
+    <div class="modal-overlay" id="courseModal" onclick="closeCourseModal(event)">
+        <div class="modal-content wide">
+            <button class="modal-close" onclick="closeCourseModal()">&times;</button>
+            <h2 class="modal-title">Opret nyt kursus</h2>
+            
+            <form class="course-form" onsubmit="createCourse(event)">
+                <div class="form-group">
+                    <label class="form-label">Kursusnavn</label>
+                    <input type="text" class="form-input" placeholder="f.eks. Psykologi Grundkursus">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Uddannelsessted</label>
+                    <select class="form-select">
+                        <option value="">Vælg uddannelsessted</option>
+                        <option value="ku">Københavns Universitet</option>
+                        <option value="au">Aarhus Universitet</option>
+                        <option value="sdu">Syddansk Universitet</option>
+                        <option value="aau">Aalborg Universitet</option>
+                        <option value="ruc">Roskilde Universitet</option>
+                        <option value="dtu">Danmarks Tekniske Universitet</option>
+                        <option value="cbs">Copenhagen Business School</option>
+                        <option value="itu">IT-Universitetet</option>
+                        <option value="ku-sund">Københavns Universitet - Sundhed</option>
+                        <option value="viauc">VIA University College</option>
+                        <option value="kea">Københavns Erhvervsakademi</option>
+                        <option value="ucl">University College Lillebælt</option>
+                        <option value="ucc">University College Capital</option>
+                        <option value="phmetropol">Professionshøjskolen Metropol</option>
+                        <option value="andet">Andet</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Dato/Semester</label>
+                    <input type="text" class="form-input" placeholder="f.eks. Forår 2025">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Studieretning</label>
+                    <select class="form-select">
+                        <option value="">Vælg studieretning</option>
+                        <option value="psykologi">Psykologi</option>
+                        <option value="jura">Jura</option>
+                        <option value="medicin">Medicin</option>
+                        <option value="okonomi">Økonomi</option>
+                        <option value="datalogi">Datalogi</option>
+                        <option value="ingeniør">Ingeniør</option>
+                        <option value="historie">Historie</option>
+                        <option value="sprog">Sprog og Litteratur</option>
+                        <option value="matematik">Matematik</option>
+                        <option value="fysik">Fysik</option>
+                        <option value="kemi">Kemi</option>
+                        <option value="biologi">Biologi</option>
+                        <option value="samfundsfag">Samfundsfag</option>
+                        <option value="pædagogik">Pædagogik</option>
+                        <option value="andet">Andet</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="form-submit">Opret kursus</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function goHome() {
+            // Already on dashboard
+        }
+
+        function goToCourse() {
+            window.location.href = 'course.html';
+        }
+
+        function openCourseModal() {
+            document.getElementById('courseModal').style.display = 'flex';
+        }
+
+        function closeCourseModal(event) {
+            if (event && event.target !== event.currentTarget) {
+                return;
+            }
+            document.getElementById('courseModal').style.display = 'none';
+        }
+
+        function createCourse(event) {
+            event.preventDefault();
+            window.location.href = 'course-creation.html';
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCourseModal();
+            }
+        });
+    </script>
+</body>
+</html>
