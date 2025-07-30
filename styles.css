@@ -1,9 +1,9 @@
 /* CSS Variables - Notion-Inspired Design System */
 :root {
     /* Primary Backgrounds */
-    --bg-primary: #ffffff;
+    --bg-primary: #fefcf8;
     --bg-secondary: #f7f7f5;
-    --bg-elevated: #ffffff;
+    --bg-elevated: #fefcf8;
 
     /* Text Colors */
     --text-primary: #2f3437;
@@ -16,10 +16,10 @@
     --border-focus: #2f3437;
 
     /* Accent Colors */
-    --accent-blue: #d49313;
+    --accent-blue: #006B7F;
     --accent-green: #24a148;
     --accent-purple: #8a3ffc;
-    --accent-orange: #ff832b;
+    --accent-orange: #006B7F;
     --accent-red: #da1e28;
 
     /* Interactive States */
@@ -46,14 +46,12 @@ body {
 /* Header Styles */
 .header {
     background-color: var(--bg-elevated);
-    border-bottom: 1px solid var(--border-light);
     padding: 16px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     backdrop-filter: blur(8px);
-    box-shadow: var(--shadow-subtle);
 }
 
 /* Remove border on landing page */
@@ -172,10 +170,10 @@ body:has(.main-content.landing) .header {
 }
 
 .btn-primary:hover, .signup-btn:hover {
-    background-color: #b8800f;
-    border-color: #b8800f;
+    background-color: #005761;
+    border-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 107, 127, 0.25);
 }
 
 /* Secondary Button */
@@ -279,7 +277,7 @@ body:has(.main-content.landing) .header {
     background-color: var(--accent-blue);
     color: white;
     padding: 16px 32px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     border: none;
     border-radius: 8px;
@@ -291,9 +289,9 @@ body:has(.main-content.landing) .header {
 }
 
 .cta-button:hover {
-    background-color: #b8800f;
+    background-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 107, 127, 0.25);
 }
 
 /* Value Features Section */
@@ -719,9 +717,9 @@ body:has(.main-content.landing) .header {
 }
 
 .login-submit:hover, .form-submit:hover {
-    background-color: #b8800f;
+    background-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 107, 127, 0.25);
 }
 
 .divider {
@@ -1024,9 +1022,9 @@ body:has(.main-content.landing) .header {
 }
 
 .generate-btn:hover {
-    background-color: #b8800f;
+    background-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 107, 127, 0.25);
 }
 }
 
@@ -1140,9 +1138,9 @@ body:has(.main-content.landing) .header {
 }
 
 .resume-btn:hover {
-    background-color: #b8800f;
+    background-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 107, 127, 0.25);
 }
 
 .share-btn {
@@ -1233,10 +1231,10 @@ body:has(.main-content.landing) .header {
 }
 
 .lecture-card.in-progress .lecture-btn:hover {
-    background-color: #b8800f;
-    border-color: #b8800f;
+    background-color: #005761;
+    border-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 107, 127, 0.25);
 }
 
 /* Completed lectures - full opacity, success styling */
@@ -1352,10 +1350,10 @@ body:has(.main-content.landing) .header {
 }
 
 .lecture-btn:hover {
-    background-color: #b8800f;
-    border-color: #b8800f;
+    background-color: #005761;
+    border-color: #005761;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 107, 127, 0.25);
 }
 
 .lecture-btn.continue {
@@ -1364,6 +1362,6 @@ body:has(.main-content.landing) .header {
 }
 
 .lecture-btn.continue:hover {
-    background-color: #e67700;
-    border-color: #e67700;
+    background-color: #005761;
+    border-color: #005761;
 }

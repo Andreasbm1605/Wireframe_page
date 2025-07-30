@@ -47,10 +47,10 @@ Transform boring academic materials into interactive learning experiences throug
 --border-focus: #2f3437;      /* Focus states, active elements */
 
 /* Accent Colors (Soft Pastels) */
---accent-blue: #d49313;       /* Primary actions, links (golden amber) */
+--accent-blue: #006B7F;       /* Primary actions, links (teal) */
 --accent-green: #24a148;      /* Success states, completed items */
 --accent-purple: #8a3ffc;     /* Creative/design elements */
---accent-orange: #ff832b;     /* Warnings, highlights */
+--accent-orange: #006B7F;     /* Warnings, highlights */
 --accent-red: #da1e28;        /* Errors, destructive actions */
 
 /* Interactive States */
