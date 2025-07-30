@@ -1,8 +1,8 @@
 # StudyQuest Project Overview
 
 ## Current Implementation Status
-**Last Updated**: January 2025  
-**Version**: Wireframe Prototype v2.0 (Notion-inspired redesign)  
+**Last Updated**: July 2025
+**Version**: Wireframe Prototype v2.0 (Notion-inspired redesign)
 **Status**: Modern design system implemented - enhanced visual appeal and user experience
 
 ---
@@ -14,10 +14,11 @@ studyquest/
 ├── index.html              # Landing page with login/signup
 ├── dashboard.html          # Main dashboard (logged in home)
 ├── course-creation.html    # Course setup and content upload
-├── course.html            # Generated course viewing page
-├── styles.css             # Global stylesheet (single file)
-├── CLAUDE.md              # Development rules and design system
-└── project_overview.md    # This file - current status
+├── course.html             # Generated course viewing page
+├── styles.css              # Global stylesheet (single file)
+├── Logo_landingpage.png    # Logo image
+├── CLAUDE.md               # Development rules and design system
+└── project_overview.md     # This file - current status
 ```
 
 ---
@@ -30,7 +31,7 @@ START: index.html (Landing Page)
 ├── Login/Signup Modal → dashboard.html
 ├── "Create first course" CTA → dashboard.html
 │
-FROM: dashboard.html (Main Dashboard)  
+FROM: dashboard.html (Main Dashboard)
 ├── StudyQuest Logo → dashboard.html (refresh)
 ├── Existing Course Card → course.html
 ├── "+" Add Course Card → Course Creation Modal
@@ -40,7 +41,7 @@ FROM: dashboard.html (Main Dashboard)
 │
 FROM: course-creation.html (Course Setup)
 ├── StudyQuest Logo → dashboard.html
-├── "← Tilbage til hovedside" → dashboard.html  
+├── "← Tilbage til hovedside" → dashboard.html
 ├── "Generate Course" → course.html
 ├── Upload buttons → (placeholder - no file handling)
 └── Collapsible lecture cards → (local toggle only)
@@ -56,7 +57,7 @@ FROM: course.html (Generated Course)
 
 ### Modal Interactions
 - **Login Modal**: Any auth method → dashboard.html
-- **Signup Modal**: Any auth method → dashboard.html  
+- **Signup Modal**: Any auth method → dashboard.html
 - **Course Creation Modal**: "Opret kursus" → course-creation.html
 - **All Modals**: ESC key, outside click, or X button to close
 
@@ -68,13 +69,14 @@ FROM: course.html (Generated Course)
 **Status**: ✅ Complete wireframe
 - [x] Header with logo and auth buttons
 - [x] Hero section with main value proposition
+- [x] University logos section with rolling animation (8 Danish universities)
 - [x] Feature grid (4 cards)
 - [x] Login modal with email/password + social auth
 - [x] Signup modal with registration form + social auth
 - [x] Footer
 - [x] Modal functionality (open/close/navigation)
 
-### dashboard.html (Main Dashboard) 
+### dashboard.html (Main Dashboard)
 **Status**: ✅ Complete wireframe
 - [x] Header with logo, search bar, profile pic
 - [x] "My Courses" section with add course card
@@ -97,7 +99,7 @@ FROM: course.html (Generated Course)
 - [x] "Generate Course" button → course.html
 
 ### course.html (Generated Course)
-**Status**: ✅ Complete wireframe  
+**Status**: ✅ Complete wireframe
 - [x] Header with search bar
 - [x] Back button navigation
 - [x] Course overview card with meta info
@@ -127,7 +129,7 @@ FROM: course.html (Generated Course)
 
 ### Courses (Dashboard)
 1. **Psykologi Grundkursus** - KU, Forår 2025, 65% progress
-2. **Statistik og Metode** - KU, Forår 2025, 32% progress  
+2. **Statistik og Metode** - KU, Forår 2025, 32% progress
 3. **Organisationspsykologi** - KU, Forår 2025, 12% progress
 
 ### Co-student Courses (Dashboard)
@@ -136,9 +138,9 @@ FROM: course.html (Generated Course)
 3. **Udviklingspsykologi** - KU, Shared by Sarah
 
 ### Course Content (course.html)
-- **Course**: Psykologi Grundkursus (65% complete, 8/12 lectures done)
+- **Course**: Psykologi Grundkursus (65% complete, 8/8 lectures done)
 - **Lectures 1-2**: Completed (100%) - "Revisit lecture" buttons
-- **Lecture 3**: In progress (45%) - "Continue learning" button  
+- **Lecture 3**: In progress (62%) - "Continue learning" button
 - **Lectures 4-8**: Not started (0%) - "Start learning" buttons
 
 ### Form Options
@@ -151,7 +153,7 @@ FROM: course.html (Generated Course)
 
 ### Current Limitations
 - [ ] No real authentication system
-- [ ] No file upload functionality  
+- [ ] No file upload functionality
 - [ ] No form validation
 - [ ] No data persistence
 - [ ] Search functionality not implemented
