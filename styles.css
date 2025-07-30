@@ -79,6 +79,7 @@ body {
     max-width: 340px;
     object-fit: contain;
     transition: opacity 0.2s ease;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(10%) saturate(830%) hue-rotate(159deg) brightness(95%) contrast(92%);
 }
 
 .logo.large .logo-image {
@@ -292,7 +293,7 @@ body {
 
 /* University Logos Section */
 .university-logos-section {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     padding: 60px 0;
     margin: 0;
     overflow: hidden;
