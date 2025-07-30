@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyQuest - Transform Your Study Experience</title>
+    <title>StudyQuest - Transformér Din Studieoplevelse</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,20 +12,20 @@
             <img src="studyquestlogo123.png" alt="StudyQuest" class="logo-image">
         </div>
         <div class="auth-buttons">
-            <button class="login-btn" onclick="openLoginModal()">Login</button>
-            <button class="signup-btn" onclick="openSignupModal()">Sign Up</button>
+            <button class="login-btn" onclick="openLoginModal()">Log ind</button>
+            <button class="signup-btn" onclick="openSignupModal()">Tilmeld dig</button>
         </div>
     </header>
 
     <div class="main-content landing">
         <section class="hero-section">
-            <h1 class="hero-title">Transform Boring Academic Materials Into Interactive Learning</h1>
-            <p class="hero-subtitle">Stop struggling with overwhelming PDFs and textbooks. StudyQuest turns passive reading into active, engaging study sessions with AI-powered quizzes and progress tracking.</p>
-            <button class="cta-button" onclick="goToDashboard()">Create your first course for free</button>
+            <h1 class="hero-title">Transformer Tunge Akademiske Tekster Til Interaktive Læringsforløb</h1>
+            <p class="hero-subtitle">Stop med at kæmpe med overvældende PDF'er og lærebøger. StudyQuest forvandler passiv læsning til aktive, engagerende studiesessioner med AI-drevne quizzer, mock-eksamener og intelligent progress-tracking.</p>
+            <button class="cta-button" onclick="goToDashboard()">Opret dit første kursus gratis</button>
         </section>
 
         <section class="university-logos-section">
-            <h2 class="logos-title">Trusted by students at</h2>
+            <h2 class="logos-title">Benyttes flittigt af studerende på: </h2>
             <div class="logos-container">
                 <div class="logos-track">
                     <img src="university logos/KU logo.png" alt="Københavns Universitet" class="university-logo">
@@ -49,55 +49,60 @@
             </div>
         </section>
 
+        <section class="about-section">
+            <h2 class="about-title">Af Studerende Til Studerende</h2>
+            <p class="about-description">Som studerende på henholdsvis IT-Universitetet og KEA, har vi fundet ud af at studerende ikke altid bruger de AI værktøjer vi har til rådighed lige effektivt. Derfor har vi bygget StudyQuest som et slags Studie-Multitool. En hjemmeside, der kan alt hvad du bruger AI til nu, og meget mere til.</p>
+        </section>
+
         <section class="features-section">
-            <h2 class="features-title">Why Students Choose StudyQuest</h2>
+            <h2 class="features-title">Hvorfor Studerende Vælger StudyQuest</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📚</div>
-                    <h3 class="feature-title">Structure Your Study Material</h3>
-                    <p class="feature-description">AI automatically organizes complex academic content into manageable, logical chunks that follow proven learning principles.</p>
+                    <h3 class="feature-title">Strukturér Dit Studiemateriale</h3>
+                    <p class="feature-description">AI organiserer automatisk komplekst akademisk indhold i håndterbare, logiske dele, der følger dokumenterede læringsprincipper.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Active Learning Experience</h3>
-                    <p class="feature-description">Interactive quizzes and tests keep you engaged throughout your reading, ensuring better retention and understanding.</p>
+                    <h3 class="feature-title">Aktiv Læringsoplevelse</h3>
+                    <p class="feature-description">Interaktive quizzer og tests holder dig engageret gennem din læsning og sikrer bedre fastholdelse og forståelse.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Track Your Progress</h3>
-                    <p class="feature-description">See exactly how much you've covered and what areas need more attention with detailed progress tracking.</p>
+                    <h3 class="feature-title">Spor Din Fremgang</h3>
+                    <p class="feature-description">Se præcist hvor meget du har dækket, og hvilke områder der har brug for mere opmærksomhed med detaljeret fremgangssporing.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎤</div>
-                    <h3 class="feature-title">Exam Simulation</h3>
-                    <p class="feature-description">Practice with AI-powered mock oral exams that prepare you for real exam situations with personalized feedback.</p>
+                    <h3 class="feature-title">Eksamenssimulering</h3>
+                    <p class="feature-description">Øv dig med AI-drevne prøveeksamen der forbereder dig til rigtige eksamenssituationer med personlig feedback.</p>
                 </div>
             </div>
         </section>
     </div>
 
     <footer class="footer">
-        <p class="footer-text">© 2025 StudyQuest. Transform your study experience today.</p>
+        <p class="footer-text">© 2025 StudyQuest. Transformér din studieoplevelse i dag.</p>
     </footer>
 
     <!-- Login Modal -->
     <div class="modal-overlay" id="loginModal" onclick="closeModal(event, 'loginModal')">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal(null, 'loginModal')">&times;</button>
-            <h2 class="modal-title">Login to StudyQuest</h2>
+            <h2 class="modal-title">Log ind på StudyQuest</h2>
             
             <form class="login-form" onsubmit="login(event)">
                 <div class="form-group">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-input" placeholder="Enter your email">
+                    <input type="email" class="form-input" placeholder="Indtast din e-mail">
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-input" placeholder="Enter your password">
+                    <input type="password" class="form-input" placeholder="Indtast din adgangskode">
                 </div>
                 
-                <button type="submit" class="login-submit">Login</button>
+                <button type="submit" class="login-submit">Log ind</button>
             </form>
             
             <div class="divider">
@@ -107,15 +112,15 @@
             <div class="social-login">
                 <button class="social-btn" onclick="login(event)">
                     <div class="social-icon"></div>
-                    Continue with Google
+                    Fortsæt med Google
                 </button>
                 <button class="social-btn" onclick="login(event)">
                     <div class="social-icon"></div>
-                    Continue with Facebook
+                    Fortsæt med Facebook
                 </button>
                 <button class="social-btn" onclick="login(event)">
                     <div class="social-icon"></div>
-                    Continue with Apple
+                    Fortsæt med Apple
                 </button>
             </div>
         </div>
@@ -125,30 +130,30 @@
     <div class="modal-overlay" id="signupModal" onclick="closeModal(event, 'signupModal')">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal(null, 'signupModal')">&times;</button>
-            <h2 class="modal-title">Join StudyQuest</h2>
+            <h2 class="modal-title">Tilmeld dig StudyQuest</h2>
             
             <form class="login-form" onsubmit="signup(event)">
                 <div class="form-group">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-input" placeholder="Enter your full name">
+                    <label class="form-label">Fulde navn</label>
+                    <input type="text" class="form-input" placeholder="Indtast dit fulde navn">
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-input" placeholder="Enter your email">
+                    <input type="email" class="form-input" placeholder="Indtast din e-mail">
                 </div>
                 
                 <div class="form-group">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-input" placeholder="Create a password">
+                    <input type="password" class="form-input" placeholder="Opret en adgangskode">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Confirm Password</label>
-                    <input type="password" class="form-input" placeholder="Confirm your password">
+                    <label class="form-label">Bekræft adgangskode</label>
+                    <input type="password" class="form-input" placeholder="Bekræft din adgangskode">
                 </div>
                 
-                <button type="submit" class="login-submit">Create Account</button>
+                <button type="submit" class="login-submit">Opret konto</button>
             </form>
             
             <div class="divider">
@@ -158,15 +163,15 @@
             <div class="social-login">
                 <button class="social-btn" onclick="signup(event)">
                     <div class="social-icon"></div>
-                    Continue with Google
+                    Fortsæt med Google
                 </button>
                 <button class="social-btn" onclick="signup(event)">
                     <div class="social-icon"></div>
-                    Continue with Facebook
+                    Fortsæt med Facebook
                 </button>
                 <button class="social-btn" onclick="signup(event)">
                     <div class="social-icon"></div>
-                    Continue with Apple
+                    Fortsæt med Apple
                 </button>
             </div>
         </div>

@@ -56,6 +56,11 @@ body {
     box-shadow: var(--shadow-subtle);
 }
 
+/* Remove border on landing page */
+body:has(.main-content.landing) .header {
+    border-bottom: none;
+}
+
 .logo {
     font-size: 20px;
     font-weight: 600;
@@ -347,6 +352,30 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.about-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .features-section {
