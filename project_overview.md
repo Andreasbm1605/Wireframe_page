@@ -69,6 +69,7 @@ FROM: course.html (Generated Course)
 **Status**: ✅ Complete wireframe - Fully Danish localized
 - [x] Header with logo and auth buttons (Danish text)
 - [x] Hero section with main value proposition (Danish)
+- [x] Value features section with 4 key benefits (Danish)
 - [x] University logos section with rolling animation (8 Danish universities)
 - [x] Feature grid (4 cards) (Danish descriptions)
 - [x] Login modal with email/password + social auth (Danish)
@@ -220,6 +221,20 @@ FROM: course.html (Generated Course)
 ---
 
 ## Change Log
+
+### v2.1 (January 2025) - Value Proposition Enhancement & Icon Implementation  
+- ✅ Added new value features section between hero and university logos on landing page
+- ✅ 4 key benefit cards: Sophisticated chatbot, structured learning paths, oral exam practice, intelligent progress tracking
+- ✅ **UPDATED**: Changed from card-based layout to large icon display with text below
+- ✅ **UPDATED**: Changed section backgrounds from gray to white for consistency
+- ✅ Improved landing page flow with clearer value communication
+- ✅ **NEW**: Replaced generic emoji icons with custom PNG icons from "feature icons" folder
+  - Robot.png for AI chatbot features  
+  - book icon.png for structured learning features
+  - examtalk.png for oral exam practice
+  - progress.png for progress tracking features
+- ✅ Updated CSS styling for large icon layout (120px for value features, 140px for main features)
+- ✅ Removed card hover effects and shadows for cleaner, simpler design
 
 ### v2.0 (January 2025) - Notion-Inspired Redesign
 - ✅ Complete design system overhaul with modern Notion-inspired aesthetic
