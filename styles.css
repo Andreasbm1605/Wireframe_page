@@ -16,7 +16,7 @@
     --border-focus: #2f3437;
 
     /* Accent Colors */
-    --accent-blue: #0f62fe;
+    --accent-blue: #d49313;
     --accent-green: #24a148;
     --accent-purple: #8a3ffc;
     --accent-orange: #ff832b;
@@ -72,6 +72,17 @@ body {
 .logo.large {
     font-size: 28px;
     font-weight: 700;
+}
+
+.logo-image {
+    height: 54px;
+    max-width: 340px;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+.logo.large .logo-image {
+    height: 68px;
 }
 
 .search-bar {
@@ -155,10 +166,10 @@ body {
 }
 
 .btn-primary:hover, .signup-btn:hover {
-    background-color: #0853d1;
-    border-color: #0853d1;
+    background-color: #b8800f;
+    border-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
 }
 
 /* Secondary Button */
@@ -274,9 +285,9 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #0853d1;
+    background-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 4px 12px rgba(212, 147, 19, 0.25);
 }
 
 .features-section {
@@ -582,9 +593,9 @@ body {
 }
 
 .login-submit:hover, .form-submit:hover {
-    background-color: #0853d1;
+    background-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
 }
 
 .divider {
@@ -887,9 +898,9 @@ body {
 }
 
 .generate-btn:hover {
-    background-color: #0853d1;
+    background-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 4px 12px rgba(212, 147, 19, 0.25);
 }
 }
 
@@ -1003,9 +1014,9 @@ body {
 }
 
 .resume-btn:hover {
-    background-color: #0853d1;
+    background-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
 }
 
 .share-btn {
@@ -1096,10 +1107,10 @@ body {
 }
 
 .lecture-card.in-progress .lecture-btn:hover {
-    background-color: #0853d1;
-    border-color: #0853d1;
+    background-color: #b8800f;
+    border-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
 }
 
 /* Completed lectures - full opacity, success styling */
@@ -1215,10 +1226,10 @@ body {
 }
 
 .lecture-btn:hover {
-    background-color: #0853d1;
-    border-color: #0853d1;
+    background-color: #b8800f;
+    border-color: #b8800f;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 147, 19, 0.25);
 }
 
 .lecture-btn.continue {
