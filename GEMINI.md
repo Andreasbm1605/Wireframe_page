@@ -29,37 +29,54 @@ Transform boring academic materials into interactive learning experiences throug
 
 ## Design System
 
-### Color Palette (60-30-10 Grayscale Rule)
+### Color Palette (Notion-Inspired Clean Aesthetic)
 ```css
-/* 60% - Light grays (dominant background colors) */
---bg-primary: #f8f9fa;        /* Main page background */
---bg-secondary: #e9ecef;      /* Cards, headers, modals */
+/* Primary Backgrounds */
+--bg-primary: #ffffff;        /* Pure white - main page background */
+--bg-secondary: #f7f7f5;      /* Light warm gray - cards, sidebars */
+--bg-elevated: #ffffff;       /* White - modals, dropdowns */
 
-/* 30% - Medium grays (secondary elements) */
---border-primary: #adb5bd;    /* Borders, dividers */
---text-secondary: #666;       /* Secondary text, descriptions */
---bg-tertiary: #dee2e6;       /* Progress bar backgrounds, inactive elements */
+/* Text Colors */
+--text-primary: #2f3437;      /* Dark charcoal - headlines, primary text */
+--text-secondary: #787774;    /* Medium gray - descriptions, labels */
+--text-muted: #a6a6a3;        /* Light gray - placeholders, disabled text */
 
-/* 10% - Dark gray (accent/focus elements) */
---text-primary: #343a40;      /* Headlines, important text */
---accent-primary: #343a40;    /* Primary buttons, progress fills, active states */
---accent-hover: #495057;      /* Hover states */
+/* Border & Divider Colors */
+--border-light: #e9e9e7;      /* Light borders, dividers */
+--border-medium: #d3d3d0;     /* Medium borders, form inputs */
+--border-focus: #2f3437;      /* Focus states, active elements */
+
+/* Accent Colors (Soft Pastels) */
+--accent-blue: #0f62fe;       /* Primary actions, links */
+--accent-green: #24a148;      /* Success states, completed items */
+--accent-purple: #8a3ffc;     /* Creative/design elements */
+--accent-orange: #ff832b;     /* Warnings, highlights */
+--accent-red: #da1e28;        /* Errors, destructive actions */
+
+/* Interactive States */
+--hover-light: #f4f4f4;       /* Light hover backgrounds */
+--hover-medium: #e8e8e8;      /* Medium hover backgrounds */
+--shadow-subtle: 0 1px 3px rgba(0,0,0,0.1);     /* Card shadows */
+--shadow-elevated: 0 4px 12px rgba(0,0,0,0.15); /* Modal shadows */
 ```
 
 ### Typography Rules
-- **Font Family**: Arial, sans-serif (web-safe, clean)
-- **Headings**: Always bold, always dark gray (#343a40)
-- **Body Text**: Regular weight, medium gray (#666)
-- **Interactive Text**: Dark gray (#343a40)
-- **Size Hierarchy**: Use consistent font-size classes (.large, .hero, etc.)
+- **Font Family**: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+- **Large Headings**: 28-32px, font-weight: 700, color: var(--text-primary)
+- **Medium Headings**: 20-24px, font-weight: 600, color: var(--text-primary)
+- **Body Text**: 14-16px, font-weight: 400, color: var(--text-secondary)
+- **Small Text**: 12-14px, font-weight: 400, color: var(--text-muted)
+- **Interactive Text**: 14-16px, font-weight: 500, color: var(--text-primary)
+- **Line Height**: 1.5 for body text, 1.2 for headings
 
 ### Spacing System
 - **Container Max-Width**: 1200px (standard), 1000px (narrow pages)
-- **Card Padding**: 20px standard
-- **Grid Gap**: 20px between cards
-- **Section Spacing**: 40px between major sections
-- **Header Padding**: 15px vertical, 30px horizontal
+- **Card Padding**: 24px standard, 32px for large cards
+- **Grid Gap**: 16px between cards (tighter, more modern)
+- **Section Spacing**: 48px between major sections
+- **Header Padding**: 16px vertical, 32px horizontal
 - **Modal Padding**: 40px all sides
+- **Border Radius**: 8px for cards, 6px for buttons, 12px for large elements
 
 ---
 
@@ -75,11 +92,13 @@ Transform boring academic materials into interactive learning experiences throug
 ```
 
 ### Card Design Rules
-- **Border**: Always 2px solid #adb5bd
+- **Background**: var(--bg-elevated) (pure white)
+- **Border**: 1px solid var(--border-light)
 - **Border Radius**: 8px consistent
-- **Background**: #e9ecef for primary cards
-- **Hover Effect**: border-color change to #343a40
+- **Shadow**: var(--shadow-subtle) for elevation
+- **Hover Effect**: box-shadow elevation and subtle scale (transform: translateY(-1px))
 - **Cursor**: pointer for clickable cards
+- **Padding**: 24px standard, 32px for content-heavy cards
 
 ### Modal Design Pattern
 ```html
@@ -92,16 +111,23 @@ Transform boring academic materials into interactive learning experiences throug
 </div>
 ```
 
-### Button Hierarchy (Strict Order)
-1. **Primary**: Dark background (#343a40), white text - main actions
-2. **Secondary**: Transparent background, gray border (#adb5bd) - secondary actions  
-3. **Tertiary**: Medium gray background (#adb5bd) - less important actions
+### Button Hierarchy (Notion-Inspired)
+1. **Primary**: var(--accent-blue) background, white text, subtle shadow - main actions
+2. **Secondary**: white background, var(--border-medium) border, var(--text-primary) text - secondary actions  
+3. **Ghost**: transparent background, var(--text-secondary) text, hover background - tertiary actions
+4. **Destructive**: var(--accent-red) background, white text - dangerous actions
+- **Border Radius**: 6px for all buttons
+- **Padding**: 8px 16px for standard, 12px 24px for large buttons
 
 ### Progress Indicator Rules
-- **Dashboard Style**: Horizontal bars with percentage text
-- **Course Page Style**: Circular borders using conic-gradient
-- **Colors**: Always #343a40 for progress, #dee2e6 for remaining
-- **States**: Not started (thin), In progress (partial thick), Completed (full thick)
+- **Dashboard Style**: Horizontal bars with percentage text and smooth animations
+- **Course Page Style**: Circular borders using conic-gradient with modern styling
+- **Colors**: var(--accent-green) for completed, var(--accent-blue) for in-progress, var(--border-light) for remaining
+- **States**: 
+  - Not started: Light border with var(--border-light)
+  - In progress: Partial fill with var(--accent-blue), subtle pulse animation
+  - Completed: Full var(--accent-green) with checkmark icon
+- **Animations**: Smooth transitions (0.3s ease) for all state changes
 
 ---
 
